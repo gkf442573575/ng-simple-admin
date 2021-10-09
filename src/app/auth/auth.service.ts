@@ -22,7 +22,6 @@ export class AuthService {
   }
 
   logout(): void {
-    console.log('2')
     this.isLoggedIn = false;
     this.username = ''
   }

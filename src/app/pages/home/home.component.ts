@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,16 +8,15 @@ import { AuthService } from '../../auth/auth.service';
   styleUrls: ['./home.component.less'],
 })
 export class HomeComponent {
-
   isCollapsed = false;
   username: string = '';
 
-  constructor(public authService: AuthService) {
-    this.username = this.authService.username
+  constructor(public authService: AuthService, public router: Router) {
+    this.username = this.authService.username;
   }
 
-  logout(){
-    console.log('1')
+  logout() {
     this.authService.logout();
+    this.router.navigate(['/login']);
   }
 }
