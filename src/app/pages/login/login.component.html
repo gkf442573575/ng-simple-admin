@@ -1,6 +1,46 @@
-<h2>LOGIN</h2>
-<p>{{message}}</p>
-<p>
-  <button (click)="login()"  *ngIf="!authService.isLoggedIn">Login</button>
-  <button (click)="logout()" *ngIf="authService.isLoggedIn">Logout</button>
-</p>
+<div class="login app-container">
+  <ng-particles
+    [id]="'login-canvas'"
+    [options]="particlesOptions"
+  ></ng-particles>
+  <div class="login-card">
+    <div class="login-title">LOGIN</div>
+
+    <div [ngClass]="['login-form', focusCtorl === 'username' ? 'active' : '']">
+      <div class="login-form-title">USER NAME</div>
+      <div class="login-form-input">
+        <input
+          [(ngModel)]="username"
+          (focus)="focusCtorl = 'username'"
+          (blur)="focusCtorl = ''"
+        />
+      </div>
+    </div>
+    <div [ngClass]="['login-form', focusCtorl === 'password' ? 'active' : '']">
+      <div class="login-form-title">PASSWORD</div>
+      <div class="login-form-input">
+        <input
+          [type]="isShowPw ? 'text' : 'password'"
+          [(ngModel)]="password"
+          (focus)="focusCtorl = 'password'"
+          (blur)="focusCtorl = ''"
+        />
+        <i
+          nz-icon
+          nzTheme="outline"
+          [ngClass]="['pw-icon', password ? 'show' : '']"
+          [nzType]="isShowPw ? 'eye' : 'eye-invisible'"
+          (click)="isShowPw = !isShowPw"
+        ></i>
+      </div>
+    </div>
+    <button
+      nz-button
+      nzType="primary"
+      [disabled]="password && username ? false : true"
+      (click)="login()"
+    >
+      SIGN IN
+    </button>
+  </div>
+</div>

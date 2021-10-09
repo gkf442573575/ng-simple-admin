@@ -12,6 +12,8 @@ export class AuthService {
   // store the URL so we can redirect after logging in
   redirectUrl: string | null = null;
 
+  username: string = ''
+
   login(): Observable<boolean> {
     return of(true).pipe(
       delay(1000),
@@ -20,6 +22,8 @@ export class AuthService {
   }
 
   logout(): void {
+    console.log('2')
     this.isLoggedIn = false;
+    this.username = ''
   }
 }

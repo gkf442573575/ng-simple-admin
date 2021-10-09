@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { IconsProviderModule } from '../../icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
     FormsModule,
     IconsProviderModule,
     NzLayoutModule,
-    NzMenuModule
+    NzMenuModule,
+    NzDropDownModule
   ],
   providers: [],
   exports: [HomeComponent]
