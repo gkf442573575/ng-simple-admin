@@ -1,6 +1,10 @@
-# NgSimpleAdmin
+# ng-simple-admin
+
+### Simple admin template using ng-zorro-antd
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
+
+[ng-zorro-antd](https://ng.ant.design) version 12.0.1
 
 ## Development server
 
