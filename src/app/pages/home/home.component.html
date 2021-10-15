@@ -22,10 +22,10 @@
       <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/home">Welcome</a>
+            <a routerLink="/home/welcome">Welcome</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a>Monitor</a>
+            <a routerLink="/home/monitor">Monitor</a>
           </li>
           <li nz-menu-item nzMatchRouter>
             <a>Workplace</a>
@@ -55,8 +55,8 @@
         
         <nz-dropdown-menu #user="nzDropdownMenu">
           <ul nz-menu>
-            <li nz-menu-item><a routerLink="/user">个人中心</a></li>
-            <li nz-menu-item (click)="logout()">退出登录</li>
+            <li nz-menu-item><a routerLink="/user">User Center</a></li>
+            <li nz-menu-item (click)="logout()">Logout</li>
           </ul>
         </nz-dropdown-menu>
       </div>
