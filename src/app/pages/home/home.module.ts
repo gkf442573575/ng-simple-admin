@@ -10,6 +10,8 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 
+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb'
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
     IconsProviderModule,
     NzLayoutModule,
     NzMenuModule,
-    NzDropDownModule
+    NzDropDownModule,
+    NzBreadCrumbModule
   ],
   providers: [],
   exports: [HomeComponent]

@@ -51,7 +51,7 @@
             [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
           ></i>
         </span>
-        <div class="username" nz-dropdown [nzDropdownMenu]="user">{{ username[0] }}</div>
+        <div class="username" nz-dropdown [nzDropdownMenu]="user">{{ username[0].toLocaleUpperCase() }}</div>
         
         <nz-dropdown-menu #user="nzDropdownMenu">
           <ul nz-menu>
@@ -61,6 +61,7 @@
         </nz-dropdown-menu>
       </div>
     </nz-header>
+    <nz-breadcrumb [nzAutoGenerate]="true"></nz-breadcrumb>
     <nz-content>
       <div class="inner-content">
         <router-outlet></router-outlet>
